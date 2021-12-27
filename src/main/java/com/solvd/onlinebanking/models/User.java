@@ -84,5 +84,7 @@ public class User {
 	public void setListOfAccounts(List<Account> listOfAccounts) {
 		this.listOfAccounts = listOfAccounts;
 	}
+	
+	
 
 }
