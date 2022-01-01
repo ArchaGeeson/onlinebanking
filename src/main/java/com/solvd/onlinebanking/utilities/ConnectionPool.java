@@ -77,9 +77,7 @@ public class ConnectionPool {
 				log.error(e);
 			}
 			isConnectionAailable();
-		} else {
-			throw new RuntimeException("Maximum pool size reached, no available connections!");
-		}
+		} 
 		return true;
 	}
 }
