@@ -15,7 +15,7 @@ import com.solvd.onlinebanking.dao.interfaces.IUserDAO;
 import com.solvd.onlinebanking.models.User;
 import com.solvd.onlinebanking.utilities.ConnectionPool;
 
-public class UserDAO extends AbstractMySqlDAO implements IBaseDAO<User>, IUserDAO<User> {
+public class UserDAO extends AbstractMySqlDAO implements IUserDAO<User> {
 
 	private static final Logger log = LogManager.getLogger(UserDAO.class);
 	private static final String GET_USERS_BY_ID = "Select * from User where id=?";
