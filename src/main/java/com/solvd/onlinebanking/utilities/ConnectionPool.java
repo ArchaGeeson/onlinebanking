@@ -1,6 +1,5 @@
 package com.solvd.onlinebanking.utilities;
 
-
 import java.io.File;
 import java.nio.charset.Charset;
 import java.sql.Connection;
@@ -14,18 +13,19 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 public class ConnectionPool {
-	
+
 	private static ConnectionPool pooliInstance;
 	private List<Connection> connections = new CopyOnWriteArrayList<>();
 	private static Logger log = LogManager.getLogger(ConnectionPool.class.getName());
-	
+
 	private ConnectionPool() {
 		for (int i = 0; i < 3; i++) {
 			Connection connection = null;
 			Configurations configurations = new Configurations();
-			try{
-				Configuration config = configurations.properties(new File("C:\\Users\\archa\\eclipse-workspace\\onlinebanking\\src\\main\\resources\\db.properties"));
-				
+			try {
+				Configuration config = configurations.properties(new File(
+						"C:\\Users\\archa\\eclipse-workspace\\onlinebanking\\src\\main\\resources\\db.properties"));
+
 				String url = config.getString("url");
 				String username = config.getString("userName");
 				String password = config.getString("password");
@@ -77,11 +77,9 @@ public class ConnectionPool {
 				log.error(e);
 			}
 			isConnectionAailable();
+		} else {
+			throw new RuntimeException("Maximum pool size reached, no available connections!");
 		}
-		else {
-            throw new RuntimeException(
-                    "Maximum pool size reached, no available connections!");
-              }
 		return true;
 	}
 }
