@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.onlinebanking.com/user"
+	xmlns:tns="http://www.onlinebanking.com/user"
+	xmlns:common="http://www.onlinebanking.com/common">
+	<import schemaLocation="common.xsd"
+		namespace="http://www.onlinebanking.com/common" />
+
+	<complexType name="form">
+		<sequence>
+			<element name="formType" type="string" />
+			<element name="userId" type="string" />
+		</sequence>
+		<attribute name="id" type="common:id" use="required"></attribute>
+	</complexType>
+
+</schema>

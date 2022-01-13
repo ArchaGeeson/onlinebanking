@@ -2,7 +2,7 @@ package com.solvd.onlinebanking.dao.mysqlImpl;
 
 import java.util.List;
 
-import com.solvd.onlinebanking.dao.interfaces.IBalanceHistoryDAO;
+import com.solvd.onlinebanking.dao.IBalanceHistoryDAO;
 import com.solvd.onlinebanking.models.BalanceHistory;
 
 public class BalanceHistoryDAO extends AbstractMySqlDAO implements IBalanceHistoryDAO<BalanceHistory> {

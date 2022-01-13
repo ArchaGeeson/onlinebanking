@@ -1,4 +1,4 @@
-package com.solvd.onlinebanking.dao.interfaces;
+package com.solvd.onlinebanking.dao;
 
 import java.util.List;
 

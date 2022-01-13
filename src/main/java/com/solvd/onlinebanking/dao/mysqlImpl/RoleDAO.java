@@ -2,7 +2,7 @@ package com.solvd.onlinebanking.dao.mysqlImpl;
 
 import java.util.List;
 
-import com.solvd.onlinebanking.dao.interfaces.IRoleDAO;
+import com.solvd.onlinebanking.dao.IRoleDAO;
 import com.solvd.onlinebanking.models.Role;
 
 public class RoleDAO extends AbstractMySqlDAO implements IRoleDAO<Role> {

@@ -10,8 +10,8 @@ import java.util.List;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.solvd.onlinebanking.dao.interfaces.IBaseDAO;
-import com.solvd.onlinebanking.dao.interfaces.IUserDAO;
+import com.solvd.onlinebanking.dao.IBaseDAO;
+import com.solvd.onlinebanking.dao.IUserDAO;
 import com.solvd.onlinebanking.models.User;
 import com.solvd.onlinebanking.utilities.ConnectionPool;
 

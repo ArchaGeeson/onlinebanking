@@ -2,7 +2,7 @@ package com.solvd.onlinebanking.dao.mysqlImpl;
 
 import java.util.List;
 
-import com.solvd.onlinebanking.dao.interfaces.IEmployeeDAO;
+import com.solvd.onlinebanking.dao.IEmployeeDAO;
 import com.solvd.onlinebanking.models.Employee;
 
 public class EmployeeDAO extends AbstractMySqlDAO implements IEmployeeDAO<Employee> {

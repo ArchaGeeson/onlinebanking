@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.onlinebanking.com/user"
+	xmlns:tns="http://www.onlinebanking.com/user"
+	xmlns:common="http://www.onlinebanking.com/common">
+	<import schemaLocation="common.xsd"
+		namespace="http://www.onlinebanking.com/common" />
+
+	<complexType name="account">
+		<sequence>
+			<element name="accountType" type="string" />
+			<element name="accountStatus" type="string" />
+			<element name="openingBalance" type="decimal" />
+			<element name="openingDate" type="date" />
+			<element name="userId" type="string" />
+			<element name="statement" type="string" maxOccurs="2" />
+			<element name="balanceHsitory" type="string"
+				maxOccurs="unbounded" />
+			<element name="offer" type="string" maxOccurs="5" />
+			<element name="card" type="string" maxOccurs="unbounded" />
+			<element name="transaction" type="string"
+				maxOccurs="unbounded" />
+			<element name="notification" type="string"
+				maxOccurs="unbounded" />
+			<element name="banking" type="string" maxOccurs="unbounded" />
+		</sequence>
+		<attribute name="id" type="common:id" use="required"></attribute>
+	</complexType>
+</schema>

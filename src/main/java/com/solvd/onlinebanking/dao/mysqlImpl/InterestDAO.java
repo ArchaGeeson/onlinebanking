@@ -2,7 +2,7 @@ package com.solvd.onlinebanking.dao.mysqlImpl;
 
 import java.util.List;
 
-import com.solvd.onlinebanking.dao.interfaces.IInterestDAO;
+import com.solvd.onlinebanking.dao.IInterestDAO;
 import com.solvd.onlinebanking.models.Interest;
 
 public class InterestDAO extends AbstractMySqlDAO implements IInterestDAO<Interest> {

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.onlinebanking.com/user"
+	xmlns:tns="http://www.onlinebanking.com/user"
+	xmlns:common="http://www.onlinebanking.com/common">
+	<include schemaLocation="forms.xsd" />
+	<include schemaLocation="account.xsd" />
+	<import schemaLocation="common.xsd"
+		namespace="http://www.onlinebanking.com/common" />
+
+	<element name="user">
+		<complexType>
+			<sequence>
+				<element name="firstName" type="string" />
+				<element name="lastName" type="string" />
+				<element name="gender" type="string" />
+				<element name="age" type="int" />
+				<element name="userType" type="string" />
+				<element name="form" type="tns:form" maxOccurs="unbounded" />
+				<element name="account" type="tns:account"
+					maxOccurs="unbounded" />
+			</sequence>
+			<attribute name="id" type="common:id" use="required"></attribute>
+		</complexType>
+	</element>
+</schema>

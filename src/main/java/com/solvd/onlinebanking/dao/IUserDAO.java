@@ -1,4 +1,4 @@
-package com.solvd.onlinebanking.dao.interfaces;
+package com.solvd.onlinebanking.dao;
 
 import java.sql.SQLException;
 import java.util.List;

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<user id="123456">
+    <age>40</age>
+    <firstName>Tommy</firstName>
+    <gender>M</gender>
+    <lastName>Hilfiger</lastName>
+</user>

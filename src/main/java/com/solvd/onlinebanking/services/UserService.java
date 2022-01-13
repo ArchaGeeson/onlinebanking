@@ -5,8 +5,8 @@ import java.sql.SQLException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.solvd.onlinebanking.dao.interfaces.IAccountDAO;
-import com.solvd.onlinebanking.dao.interfaces.IUserDAO;
+import com.solvd.onlinebanking.dao.IAccountDAO;
+import com.solvd.onlinebanking.dao.IUserDAO;
 import com.solvd.onlinebanking.dao.mysqlImpl.AccountDAO;
 import com.solvd.onlinebanking.dao.mysqlImpl.UserDAO;
 import com.solvd.onlinebanking.models.Account;

@@ -2,31 +2,29 @@ package com.solvd.onlinebanking.models;
 
 import java.util.List;
 
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement(name = "user")
+
 public class User {
 	private Long id;
-	private String type;
 	private String firstName;
 	private String lastName;
 	private String gender;
 	private int age;
-	private Long employeeId;
+	private String type;
 	private List<Form> listOfForms;
 	private List<Account> listOfAccounts;
 
+	@XmlAttribute
 	public Long getId() {
 		return id;
 	}
 
 	public void setId(Long id) {
 		this.id = id;
-	}
-
-	public String getType() {
-		return type;
-	}
-
-	public void setType(String type) {
-		this.type = type;
 	}
 
 	public String getFirstName() {
@@ -61,12 +59,12 @@ public class User {
 		this.age = age;
 	}
 
-	public Long getEmployeeId() {
-		return employeeId;
+	public String getType() {
+		return type;
 	}
 
-	public void setEmployeeId(Long employeeId) {
-		this.employeeId = employeeId;
+	public void setType(String type) {
+		this.type = type;
 	}
 
 	public List<Form> getListOfForms() {
@@ -84,7 +82,12 @@ public class User {
 	public void setListOfAccounts(List<Account> listOfAccounts) {
 		this.listOfAccounts = listOfAccounts;
 	}
-	
-	
+
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", gender=" + gender
+				+ ", age=" + age + ", type=" + type + ", listOfForms=" + listOfForms + ", listOfAccounts="
+				+ listOfAccounts + "]";
+	}
 
 }
