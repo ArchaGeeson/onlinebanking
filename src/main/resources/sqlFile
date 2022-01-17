@@ -63,12 +63,16 @@ SELECT id FROM Interest HAVING interest_rate BETWEEN 2.5 AND 5.0;
 SELECT age, COUNT(*) FROM User GROUP BY age HAVING COUNT(*) > 65;
 SELECT age, COUNT(*) FROM User GROUP BY age HAVING COUNT(*) BETWEEN 65 AND 85;
 
+<-------------------------------------------------------------------------------->
 
-<---big join-->
 SELECT loan.id, loan.loan_type, loan.loan_amount, account.acc_type
  FROM Loan loan INNER JOIN Account account ON loan.account_id = account.id ORDER BY loan.id;
  
 SELECT * FROM User u LEFT JOIN Account a ON u.id = a.user_id;
+
+
+<---big join-->
+
 
 SELECT * FROM User u LEFT JOIN Account a ON u.id = a.user_id
   LEFT JOIN Employee e ON u.id = e.user_id
