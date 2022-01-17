@@ -1,0 +1,22 @@
+{"id" : 1,
+"firstName" : "Emma",
+	"lastName" : "Watson",
+	"gender" : "F",
+	"type" : "Customer",
+	"listOfForms" : [
+				{ "id" : 123,
+				"formType" : "application form",
+				"userId" : 123456
+				}
+			 ],
+	"listOfAccounts" : [
+					{"id": 1,
+					"type" : "savings",
+					"status" : "active",
+					"openingBalance" : 1000.0,
+					"openingDate" : "2001-01-01",
+					"userId" : 123456
+					}
+				] 
+
+}

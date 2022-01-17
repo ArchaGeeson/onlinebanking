@@ -1,0 +1,29 @@
+{
+  "id" : 1000,
+  "firstName" : "Calvin",
+  "lastName" : "Klein",
+  "gender" : "Male",
+  "age" : 35,
+  "type" : null,
+  "listOfForms" : [ {
+    "id" : 1,
+    "formType" : "Application",
+    "userId" : 1000
+  } ],
+  "listOfAccounts" : [ {
+    "id" : 1,
+    "openingBalance" : 1000.0,
+    "type" : "Savings",
+    "status" : "active",
+    "openingDate" : null,
+    "bankId" : 1,
+    "userId" : null,
+    "listOfStatements" : null,
+    "listOfBalanceHistory" : null,
+    "listOfOffer" : null,
+    "listOfCards" : null,
+    "listOfTransactions" : null,
+    "listOfNotifications" : null,
+    "listOfBankings" : null
+  } ]
+}

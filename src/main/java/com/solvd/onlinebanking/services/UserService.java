@@ -15,7 +15,7 @@ import com.solvd.onlinebanking.services.interfaces.IUserService;
 
 public class UserService implements IUserService {
 	
-	private static final Logger log = LogManager.getLogger(UserService.class);
+	private static final Logger LOG = LogManager.getLogger(UserService.class);
 	private IUserDAO<User> userDAO = new UserDAO();
 	private IAccountDAO<Account> accountDAO = new AccountDAO();
 
@@ -25,7 +25,7 @@ public class UserService implements IUserService {
 		try {
 			user = userDAO.getEntityById(id);
 		} catch (SQLException e) {
-			log.error(e);
+			LOG.error(e);
 		}
 		user.setListOfAccounts(accountDAO.getAccountByUserId(user.getId()));
 		return user;

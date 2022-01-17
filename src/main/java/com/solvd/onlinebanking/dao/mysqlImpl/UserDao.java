@@ -17,7 +17,7 @@ import com.solvd.onlinebanking.utilities.ConnectionPool;
 
 public class UserDAO extends AbstractMySqlDAO implements IUserDAO<User> {
 
-	private static final Logger log = LogManager.getLogger(UserDAO.class);
+	private static final Logger LOG = LogManager.getLogger(UserDAO.class);
 	private static final String GET_USERS_BY_ID = "Select * from User where id=?";
 	private static final String CREATE_USER = "Insert into Users"
 			+ " (id, first_ name, last_name, age, gender) VALUES (?, ?, ?, ?, ?)";
@@ -42,7 +42,7 @@ public class UserDAO extends AbstractMySqlDAO implements IUserDAO<User> {
 			statement.executeQuery();
 
 		} catch (Exception e) {
-			log.error(e);
+			LOG.error(e);
 		} finally {
 			statement.close();
 			ConnectionPool.getPoolInstance().releaseConnection(connection);
@@ -62,7 +62,7 @@ public class UserDAO extends AbstractMySqlDAO implements IUserDAO<User> {
 			resultSet = statement.executeQuery();
 			resultSetToUser(resultSet);
 		} catch (Exception e) {
-			log.error(e);
+			LOG.error(e);
 		} finally {
 			resultSet.close();
 			statement.close();
@@ -79,7 +79,7 @@ public class UserDAO extends AbstractMySqlDAO implements IUserDAO<User> {
 			user.setLastName(resultSet.getString("last_name"));
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
-			log.error(e);
+			LOG.error(e);
 		}
 		return user;
 	}
@@ -97,7 +97,7 @@ public class UserDAO extends AbstractMySqlDAO implements IUserDAO<User> {
 			statement.executeUpdate();
 
 		} catch (Exception e) {
-			log.error(e);
+			LOG.error(e);
 		} finally {
 			statement.close();
 			ConnectionPool.getPoolInstance().releaseConnection(connection);
@@ -116,7 +116,7 @@ public class UserDAO extends AbstractMySqlDAO implements IUserDAO<User> {
 			statement.executeUpdate();
 
 		} catch (Exception e) {
-			log.error(e);
+			LOG.error(e);
 		} finally {
 			statement.close();
 			ConnectionPool.getPoolInstance().releaseConnection(connection);
@@ -146,9 +146,9 @@ public class UserDAO extends AbstractMySqlDAO implements IUserDAO<User> {
 				users.add(user);
 				
 			}
-			log.info(users);
+			LOG.info(users);
 		} catch (Exception e) {
-			log.error(e);
+			LOG.error(e);
 		} finally {
 			resultSet.close();
 			statement.close();
