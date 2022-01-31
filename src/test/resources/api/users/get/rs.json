@@ -1,0 +1,25 @@
+[
+  {
+    "id": "regex:[\\d]",
+    "name": "type:String",
+    "username": "regex:[a-zA-Z\\d]+",
+    "email": "regex:[a-zA-Z\\d\\_\\.]+@[a-z]+\\.[a-z]{2,4}",
+    "address": {
+      "street": "regex:[a-zA-Z\\d]+",
+      "suite": "Apt. 556",
+      "city": "skip",
+      "zipcode": "regex:[\\d]{5}-[\\d]{4}",
+      "geo": {
+        "lat": "-37.3159",
+        "lng": "81.1496"
+      }
+    },
+    "phone": "1-770-736-8031 x56442",
+    "website": "hildegard.org",
+    "company": {
+      "name": "Romaguera-Crona",
+      "catchPhrase": "Multi-layered client-server neural-net",
+      "bs": "harness real-time e-markets"
+    }
+  }
+]

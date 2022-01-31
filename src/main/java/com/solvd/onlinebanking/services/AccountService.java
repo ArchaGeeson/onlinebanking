@@ -8,6 +8,9 @@ public class AccountService  implements IAccountServcie{
 	@Override
 	public Account getAccountByAccountId(long id) {
 		// TODO Auto-generated method stub
+		Account account = null;
+		
+		
 		return null;
 	}
 
