@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+    "userId": {
+          "type": "integer"
+        },
+     "id": {
+        "type": "integer"
+        },
+     "title": {
+        "type": "String"
+        },
+     "completed": {
+        "type":"Boolean"
+        }
+     }
+     
+     "required": [
+        "userId",
+        "id",
+        "title",
+        "completed"
+        ]
+     
+   }
+}
+        
